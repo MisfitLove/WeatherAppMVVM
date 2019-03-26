@@ -1,4 +1,6 @@
-package com.example.weatherappmvvm.data.response
+package com.example.weatherappmvvm.data.network.response
+
+import com.example.weatherappmvvm.data.db.entity.*
 
 data class CurrentWeatherResponse(
     val base: String,

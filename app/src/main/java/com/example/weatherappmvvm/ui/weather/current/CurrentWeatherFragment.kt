@@ -9,7 +9,6 @@ import android.view.ViewGroup
 
 import com.example.weatherappmvvm.R
 import com.example.weatherappmvvm.data.OpenWeatherApiService
-import com.example.weatherappmvvm.data.response.CurrentWeatherResponse
 import kotlinx.android.synthetic.main.current_weather_fragment.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
