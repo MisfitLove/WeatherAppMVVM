@@ -20,6 +20,6 @@ data class CurrentWeatherEntry (
     val sys: Sys,
     val visibility: Int,
     @Embedded(prefix = "weather_")
-    val weather: List<Weather>,   //trzeba splaszczyc bo room sie na krzywy ryj wyjebie
+    val weather: Weather,
     val wind: Wind
 )

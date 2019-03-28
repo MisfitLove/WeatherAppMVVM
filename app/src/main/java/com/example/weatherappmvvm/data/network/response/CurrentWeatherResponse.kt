@@ -1,6 +1,7 @@
 package com.example.weatherappmvvm.data.network.response
 
 import com.example.weatherappmvvm.data.db.entity.*
+import com.serjltt.moshi.adapters.FirstElement
 
 data class CurrentWeatherResponse(
     val base: String,
@@ -13,6 +14,7 @@ data class CurrentWeatherResponse(
     val name: String,
     val sys: Sys,
     val visibility: Int,
-    val weather: List<Weather>,
+    @FirstElement
+    val weather: Weather,
     val wind: Wind
 )
