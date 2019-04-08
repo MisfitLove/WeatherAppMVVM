@@ -2,6 +2,9 @@ package com.example.weatherappmvvm.data.db.entity
 
 import androidx.room.Embedded
 import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+const val CURRENT_WEATHER_ID = 0
 
 @Entity(tableName = "current_weather")
 data class CurrentWeatherEntry (
@@ -22,4 +25,7 @@ data class CurrentWeatherEntry (
     @Embedded(prefix = "weather_")
     val weather: Weather,
     val wind: Wind
-)
+) {
+    @PrimaryKey(autoGenerate = false)
+    var id_: Int = CURRENT_WEATHER_ID
+}
