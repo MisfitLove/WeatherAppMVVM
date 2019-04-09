@@ -1,25 +1,32 @@
 package com.example.weatherappmvvm.data.db.unitlocalized
 
 import androidx.room.ColumnInfo
+import androidx.room.Embedded
 import com.example.weatherappmvvm.data.db.entity.*
 
 data class MetricCurrentWeatherEntry (
+    @ColumnInfo(name = "base")
     override val base: String,
-    @ColumnInfo(name = "clouds_")
+    @Embedded(prefix = "clouds_")
     override val clouds: Clouds,
+    @ColumnInfo(name = "cod")
     override val cod: Int,
-    @ColumnInfo(name = "coord_")
+    @Embedded(prefix = "coord_")
     override val coord: Coord,
+    @ColumnInfo(name = "dt")
     override val dt: Int,
+    @ColumnInfo(name = "id")
     override val id: Int,
-    @ColumnInfo(name = "main_")
+    @Embedded(prefix = "main_")
     override val main: Main,
+    @ColumnInfo(name = "name")
     override val name: String,
-    @ColumnInfo(name = "sys_")
+    @Embedded(prefix = "sys_")
     override val sys: Sys,
+    @ColumnInfo(name = "visibility")
     override val visibility: Int,
-    @ColumnInfo(name = "weather_")
+    @Embedded(prefix = "weather_")
     override val weather: Weather,
-    @ColumnInfo(name = "wind_")
+    @Embedded(prefix = "wind_")
     override val wind: Wind
 ) : UnitSpecificCurrentWeatherEntry

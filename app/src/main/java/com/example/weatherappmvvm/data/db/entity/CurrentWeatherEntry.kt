@@ -24,6 +24,7 @@ data class CurrentWeatherEntry (
     val visibility: Int,
     @Embedded(prefix = "weather_")
     val weather: Weather,
+    @Embedded(prefix = "wind_")
     val wind: Wind
 ) {
     @PrimaryKey(autoGenerate = false)
